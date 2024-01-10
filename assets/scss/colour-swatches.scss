@@ -1,0 +1,68 @@
+$swathes: (
+	"Black": #000000,
+	"White": #FFFFFF,
+	"Brown": #654321,
+	"Burgundy": #800000,
+	"Clear": "",
+	"Coral": #F08080,
+	"Dark Green": #008000,
+	"Electric Blue": #7df9ff,
+	"Gold": #ffd700,
+	"Green": #00FF00,
+	"Hot Pink": #ff69b4,
+	"Ivory": #fffff0,
+	"Light Blue": #add8e6,
+	"Light Pink": #ffb6c1,
+	"Lime Green": #32cd32,
+	"Mint Green": #98ff98,
+	"Navy Blue": #000080,
+	"Orange": #ffa500,
+	"Pink": #ffc0cb,
+	"Purple": #800080,
+	"Rainbow": "",
+	"Red": #ff0000,
+	"Rose Gold": #b76e79,
+	"Royal Blue": #4169e1,
+	"Silver": #C0C0C0,
+	"Turquoise": #40e0d0,
+	"Yellow": #ffff00,
+	"Metallic Gold": #ffd700,
+	"Metallic Rose Gold": #b76e79,
+	"Metallic Silver": #C0C0C0,
+	"Blue": #2980b9,
+	"Dark Blue": #00008B,
+	"Electrict Blue": #7df9ff,
+	"Royal Silver": #D3D3D3,
+	"Silver Gold": #d5d5d7,
+	"Teal": #008080	
+);
+
+@each $name,
+$hex in $swathes {
+
+	@if $hex {
+		[data-facet-value="#{$name}"] {
+
+			position: relative;
+
+			&:before {
+			    height: 15px;
+			    width: 15px;
+			    display: inline-block;
+			    border: 1px solid #efefef;
+			    content: "";
+			    background-color: $hex;
+			    position: absolute;
+			    top: 6px;
+			    left: 0px; 
+			}
+
+			.navList-action {
+
+				padding-left: 20px;
+
+			}
+
+		}
+	}
+}
